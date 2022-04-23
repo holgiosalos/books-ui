@@ -22,18 +22,20 @@ jobs:
         env:
           HD_BASE_URL: ${{ secrets.API_URL }}
           HD_NODE_BUILD_FLAGS: "--prod"
-#  test:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Setup repo
-#        uses: actions/checkout@v2
-#
-#      - name: Use Node.js 12
-#        uses: actions/setup-node@v1
-#        with:
-#          node-version: 12.x
-#      - name: Install dependencies
-#        run: npm ci
-#      - name: Run Tests
-#        run: |
-#          npm run test:headless
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - name: Install dependencies
+        run: npm ci
+      - name: UI E2E Tests
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          headless: true
