@@ -8,7 +8,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Setup repo
@@ -23,6 +23,7 @@ jobs:
           HD_BASE_URL: ${{ secrets.API_URL }}
           HD_NODE_BUILD_FLAGS: "--prod"
   test:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Setup repo
