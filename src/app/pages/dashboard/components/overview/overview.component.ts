@@ -61,11 +61,9 @@ export class OverviewComponent implements OnInit {
   }
 
   onEditBook(book: IBook) {
-    Object.keys(book).forEach(key => {
-      if (this.validateForm.controls[key]) {
-        this.validateForm.controls[key].setValue(book[key]);
-      }
-    });
+    this.validateForm.controls['id'].setValue(book.id);
+    this.validateForm.controls['name'].setValue(book.name);
+    this.validateForm.controls['author'].setValue(book.author);
 
     this.isModalVisible = true;
   }
