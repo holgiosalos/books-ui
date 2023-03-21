@@ -2,7 +2,7 @@
 
 This repository was created in order to training to automation testing practices from scratch.
 
-This repository is only the Front End, please check the [back repository](https://github.com/AgileTestingColombia/books-back) in order to have all the application
+This repository is only the Front End, please check the [back repository](https://github.com/holgiosalos/books-back) in order to have all the application
 
 ## How To Deploy the application
 
@@ -22,7 +22,7 @@ This applications is thinking to deploy in [Heroku](https://www.heroku.com/) and
 Run the following commands:
 
 ```bash
-  git remote add upstream git@github.com:AgileTestingColombia/books-ui.git
+  git remote add upstream git@github.com:holgiosalo/books-ui.git
   git pull upstream main
 ```
 
@@ -34,7 +34,7 @@ If you have altered it, you then need to rebase it.
 
 ## Angular Notes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4
 
 ### Development server
 
@@ -51,10 +51,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ### Further help
 
